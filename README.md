@@ -22,9 +22,8 @@ Bluetooth
 
 Remove beep sound:
         $ sudo mkdir /etc/modeprobe.d
-        $ sudo touch /etc/modeprobe.d/pcbeep.conf
-    Now open that file and put this line in that:
-        blacklist pcspkr
+        $ sudo vim /etc/modprobe.d/nobeep.conf
+            blacklist pcspkr blacklist snd_pcsp
         $ reboot
 
 Network:
